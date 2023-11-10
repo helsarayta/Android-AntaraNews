@@ -1,15 +1,16 @@
 package com.heydieandroid.newsantara
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.heydieandroid.newsantara.Adapter.NewsAdapter
 import com.heydieandroid.newsantara.ApiConfig.ApiConfig
+import com.heydieandroid.newsantara.databinding.ActivityMainBinding
 import com.heydieandroid.newsantara.Model.News
 import com.heydieandroid.newsantara.Model.PostsItem
-import com.heydieandroid.newsantara.databinding.ActivityMainBinding
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -54,6 +55,21 @@ class MainActivity : AppCompatActivity() {
         binding.rvList.layoutManager = LinearLayoutManager(this)
         val newsAdapter = NewsAdapter(newsListData)
         binding.rvList.adapter = newsAdapter
+
+        newsAdapter.setOnClickCallBack(object : NewsAdapter.OnClickCallBack{
+            override fun itemOnClick(item: PostsItem) {
+                showSelectedNews(item)
+            }
+
+        })
+    }
+
+    private fun showSelectedNews(item: PostsItem) {
+        val toDetail = Intent(this@MainActivity, DetailActivity::class.java)
+        toDetail.putExtra(DetailActivity.NEWS_DATA, item)
+        startActivity(toDetail)
+        Toast.makeText(this, item.title, Toast.LENGTH_SHORT).show()
+
     }
 
 
