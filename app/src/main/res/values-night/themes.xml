@@ -3,5 +3,10 @@
     <style name="Base.Theme.NewsAntara" parent="Theme.Material3.DayNight">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/red</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/red</item>
     </style>
 </resources>

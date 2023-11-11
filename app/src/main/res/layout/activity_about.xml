@@ -44,77 +44,86 @@
             android:layout_height="wrap_content"
             app:layout_constraintGuide_begin="450dp"
             android:id="@+id/guideline"/>
-    <LinearLayout
+    <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/guideline"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:orientation="vertical"
-            app:layout_constraintVertical_bias="0.16000003">
-        <TextView
-                android:id="@+id/about_me_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/about_me"
-                android:gravity="center"
-                android:textSize="20sp"
-                android:layout_gravity="center"
-                android:layout_marginTop="16dp"
-                android:textStyle="italic"
-        />
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
 
-        <TextView
+    >
+        <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:layout_marginTop="16dp"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:text="@string/name"
-        />
-        <TextView
-                android:id="@+id/name_about"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/heydie_zuliansyah"
-                android:textSize="20sp"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:textColor="#275497"
-        />
+                android:orientation="vertical"
 
-        <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:gravity="center"
-                android:layout_marginTop="16dp"
-                android:textStyle="bold"
-                android:text="@string/email"
-        />
+        >
+            <TextView
+                    android:id="@+id/about_me_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/about_me"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:textStyle="italic"
+            />
 
-        <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/helsarayta_gmail_com"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="#275497"
-                android:gravity="center"
-        />
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="@string/name"
+            />
+            <TextView
+                    android:id="@+id/name_about"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/heydie_zuliansyah"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="#275497"
+            />
 
-        <ImageButton
-                android:id="@+id/btn_linkedin"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/linkedin"
-                android:scaleType="centerInside"
-                android:padding="5dp"
-                android:layout_marginTop="16dp"
-                android:layout_gravity="center"
-                android:contentDescription="@string/linkedin"/>
-    </LinearLayout>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:textStyle="bold"
+                    android:text="@string/email"
+            />
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/helsarayta_gmail_com"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#275497"
+                    android:gravity="center"
+            />
+
+            <ImageButton
+                    android:id="@+id/btn_linkedin"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/linkedin"
+                    android:scaleType="centerInside"
+                    android:padding="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/linkedin"/>
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
