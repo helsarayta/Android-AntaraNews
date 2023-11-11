@@ -27,10 +27,10 @@ data class PostsItem(
 	val link: String? = null,
 
 	@field:SerializedName("description")
-	val description: String? = null,
+	val description: String,
 
 	@field:SerializedName("title")
-	val title: String? = null,
+	val title: String,
 
 	@field:SerializedName("pubDate")
 	val pubDate: String? = null

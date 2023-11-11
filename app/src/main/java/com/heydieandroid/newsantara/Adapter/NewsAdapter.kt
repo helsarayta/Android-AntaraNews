@@ -39,9 +39,6 @@ class NewsAdapter(private val listNews:ArrayList<PostsItem>) : RecyclerView.Adap
         holder.binding.tvTitle.text = news.title
         holder.binding.tvDate.text = Utility().convertDateTime(news.pubDate)
         Utility().loadImage(holder.itemView.context, news.thumbnail, holder.binding.imgNews)
-//        Glide.with(holder.itemView.context)
-//            .load(news.thumbnail)
-//            .into(holder.binding.imgNews)
 
         holder.itemView.setOnClickListener {
             onClickCallBack.itemOnClick(listNews[holder.adapterPosition])

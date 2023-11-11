@@ -3,8 +3,9 @@ package com.heydieandroid.newsantara
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
+import androidx.core.text.HtmlCompat
 import com.heydieandroid.newsantara.Model.PostsItem
+import com.heydieandroid.newsantara.constant.Constant
 import com.heydieandroid.newsantara.databinding.ActivityDetailBinding
 import com.heydieandroid.newsantara.utility.Utility
 
@@ -27,9 +28,9 @@ class DetailActivity : AppCompatActivity() {
 
         if(item != null) {
             binding.detailTime.text = Utility().convertDateTime(item.pubDate)
-            binding.detailTitle.text = item.title
-            binding.detailDescription.text = item.description
-            binding.detailLink.text = "Selengkapnya... ${item.link}"
+            binding.detailTitle.text = HtmlCompat.fromHtml(item.title, HtmlCompat.FROM_HTML_MODE_LEGACY)
+            binding.detailDescription.text = HtmlCompat.fromHtml(item.description, HtmlCompat.FROM_HTML_MODE_LEGACY)
+            binding.detailLink.text = Constant.ADD_TEXT + item.link
             Utility().loadImage(this, item.thumbnail, binding.detailImg)
         }
     }

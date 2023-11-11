@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">NewsAntara</string>
+    <string name="app_name">AntaraNews.com</string>
     <string name="terapi_tradisional_tiongkok_ini_bantu_pulihkan_pasien_serangan_jantung">Terapi tradisional Tiongkok
         ini bantu pulihkan pasien serangan jantung
     </string>
@@ -19,4 +19,9 @@
         https://www.antaranews.com/berita/3816546/terapi-tradisional-tiongkok-ini-bantu-pulihkan-pasien-serangan-jantung
     </string>
     <string name="about_me">about me</string>
+    <string name="heydie_zuliansyah">Heydie Zuliansyah</string>
+    <string name="helsarayta_gmail_com">helsarayta@gmail.com</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="linkedin">Linkedin</string>
 </resources>

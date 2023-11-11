@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.heydieandroid.newsantara.Adapter.NewsAdapter
@@ -11,6 +13,7 @@ import com.heydieandroid.newsantara.ApiConfig.ApiConfig
 import com.heydieandroid.newsantara.databinding.ActivityMainBinding
 import com.heydieandroid.newsantara.Model.News
 import com.heydieandroid.newsantara.Model.PostsItem
+import com.heydieandroid.newsantara.constant.Constant
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -68,10 +71,7 @@ class MainActivity : AppCompatActivity() {
         val toDetail = Intent(this@MainActivity, DetailActivity::class.java)
         toDetail.putExtra(DetailActivity.NEWS_DATA, item)
         startActivity(toDetail)
-        Toast.makeText(this, item.title, Toast.LENGTH_SHORT).show()
-
     }
-
 
     private fun fetchData(callback:(List<PostsItem>?) -> Unit) {
         ApiConfig.getApiService().getLatestNews2().enqueue(object : Callback<News>{
@@ -80,14 +80,27 @@ class MainActivity : AppCompatActivity() {
                     val postsNews = response.body()?.data?.posts
                     callback(postsNews)
                 } else {
-                    Log.i("error", "No DATA !!!")
+                    Log.i(Constant.TAG_ERROR, Constant.NO_DATA)
                 }
             }
 
             override fun onFailure(call: Call<News>, t: Throwable) {
-                Log.i("DATA", t.message.toString())
+                Log.i(Constant.TAG_ERROR, t.message.toString())
             }
 
         })
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.action_about) {
+            val toAbout = Intent(this@MainActivity, AboutActivity::class.java)
+            startActivity(toAbout)
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
