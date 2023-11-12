@@ -28,10 +28,14 @@
         </activity>
         <activity
                 android:name=".AboutActivity"
-                android:exported="false"/>
+                android:exported="false"
+                android:theme="@style/SplashTheme"
+        />
         <activity
                 android:name=".DetailActivity"
-                android:exported="false"/>
+                android:exported="false"
+                android:theme="@style/SplashTheme"
+        />
         <activity
                 android:name=".MainActivity"
                 android:exported="false"/>

@@ -25,4 +25,5 @@
     <string name="name">Name</string>
     <string name="linkedin">Linkedin</string>
     <string name="berita_terkini">Berita Terkini</string>
+    <string name="berita_hari_ini">Berita Hari Ini</string>
 </resources>

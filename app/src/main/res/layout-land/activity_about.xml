@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        tools:context=".AboutActivity">
+    <ImageView
+            android:id="@+id/img_about"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:src="@drawable/back_photo"
+            android:scaleType="fitXY"
+            />
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+
+        >
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/myphoto"
+                    android:scaleType="centerCrop"
+                    android:elevation="10dp"
+                    android:translationZ="10dp"
+                    app:civ_border_width="3dp"
+                    android:layout_gravity="center"
+                    app:civ_border_color="@color/black"
+                    app:layout_constraintVertical_bias="0.81"/>
+            <TextView
+                    android:id="@+id/about_me_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/about_me"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:textStyle="italic"
+            />
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="@string/name"
+            />
+            <TextView
+                    android:id="@+id/name_about"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/heydie_zuliansyah"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="#275497"
+            />
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:textStyle="bold"
+                    android:text="@string/email"
+            />
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/helsarayta_gmail_com"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#275497"
+                    android:gravity="center"
+            />
+
+            <ImageButton
+                    android:id="@+id/btn_linkedin"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/linkedin"
+                    android:scaleType="centerInside"
+                    android:padding="5dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/linkedin"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

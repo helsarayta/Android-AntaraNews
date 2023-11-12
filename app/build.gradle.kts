@@ -8,6 +8,7 @@ android {
     namespace = "com.heydieandroid.newsantara"
     compileSdk = 34
 
+
     defaultConfig {
         applicationId = "com.heydieandroid.newsantara"
         minSdk = 30
